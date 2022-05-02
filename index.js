@@ -9,7 +9,7 @@ app.listen(3000);
 app.set("view engine","ejs");
 
 app.get('/',(req,res)=>{
-    res.render("index",{temp:null});
+    res.render("index",{data:null});
 });
 
 app.use(bodyParser.urlencoded({extended:false}))
