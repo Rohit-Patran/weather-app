@@ -3,8 +3,8 @@ const bodyParser = require("body-parser");
 const weather = require("openweather-apis");
 
 const app = express();
-
-app.listen(3000);
+const port = process.env.PORT || 3000;
+app.listen(port);
 
 app.set("view engine","ejs");
 
@@ -23,4 +23,4 @@ app.post('/',(req,res)=>{
     });
 });
 
-app.use(express.static("static"));
+app.use(express.static("public"));
