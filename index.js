@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({extended:false}))
 
 app.post('/',(req,res)=>{
     weather.setCity(req.body.city);
-    weather.setAPPID("178d9c889fd7afcbe3f4bc3cca993289");
+    weather.setAPPID("YOUR-API-KEY");
     weather.getAllWeather((err,data)=>{
         console.log(err);
         res.render("index",{data:data});
